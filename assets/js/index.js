@@ -4,7 +4,19 @@ $(document).ready(function(){
 	
 	fetch(url + "assets/data.json").then((res) => { return res.json(); }).then((data) => {records = data;});
 		
-	$("#btnTest").click(function(){
+	$("#btnLoadData").click(function(){
+		LoadData();
+	});
+	
+	$("#btnAdd").click(function(){
+		var count = records.length + 1;
+		var newRec = JSON.parse('{"srno":' + count + ',"fname":"f' + count + '","lname":"l' + count + '","address":"Pune' + count + '","dob":"","status":"0"}');
+		records[records.length] = newRec;
+		alert("Added.");
+		LoadData();
+	});
+		
+	function LoadData(){
 		$("#tblAllData tbody tr").remove();
 		
 		$.each(records, function( index, value ) {
@@ -17,5 +29,5 @@ $(document).ready(function(){
 					'<td>' + value.dob + '</td>' +
 					'<td>' + value.status + '</td></tr>');
 		});
-	});
+	};
 });
