@@ -1,0 +1,7 @@
+[
+	{"srno":"1","fname":"f1","lname":"l1","address":"Pune","dob":"","status":"1"},
+	{"srno":"2","fname":"f2","lname":"l2","address":"Pune","dob":"","status":"1"},
+	{"srno":"3","fname":"f3","lname":"l3","address":"Rajgurunagar","dob":"","status":"0"},
+	{"srno":"4","fname":"f4","lname":"l4","address":"Rajgurunagar","dob":"","status":"1"},
+	{"srno":"5","fname":"f5","lname":"l5","address":"Pune","dob":"","status":"0"}
+]
