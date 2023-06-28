@@ -1,5 +1,7 @@
 $(document).ready(function(){
-	alert("Ready");
+	$("#btnTest").click(function(){
+		alert("Button clicked.");
+	});
 });
 
 function readTextFile(file, callback) {
@@ -9,12 +11,12 @@ function readTextFile(file, callback) {
     rawFile.onreadystatechange = function() {
         if (rawFile.readyState === 4 && rawFile.status == "200") {
             callback(rawFile.responseText);
-        }
+		}
     }
     rawFile.send(null);
 }
 
-readTextFile("data.json", function(text){
+readTextFile("assets/data.json", function(text){
     //var data = JSON.parse(text);
     //console.log(data);
 });
